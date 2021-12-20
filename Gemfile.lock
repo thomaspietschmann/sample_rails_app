@@ -102,21 +102,24 @@ GEM
       will_paginate
     builder (3.2.4)
     byebug (11.1.3)
-    capistrano (3.11.2)
+    capistrano (3.16.0)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-bundler (1.6.0)
+    capistrano-bundler (2.0.1)
       capistrano (~> 3.1)
-    capistrano-passenger (0.2.0)
+    capistrano-passenger (0.2.1)
       capistrano (~> 3.0)
-    capistrano-rails (1.4.0)
+    capistrano-rails (1.6.1)
       capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
-    capistrano-rbenv (2.1.4)
+      capistrano-bundler (>= 1.1, < 3)
+    capistrano-rbenv (2.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    capistrano-rbenv-install (1.2.0)
+      capistrano (>= 3.0)
+      capistrano-rbenv (>= 2.0)
     capybara (3.35.3)
       addressable
       mini_mime (>= 0.1.3)
@@ -178,7 +181,6 @@ GEM
     method_source (1.0.0)
     mini_magick (4.9.5)
     mini_mime (1.0.3)
-    mini_portile2 (2.6.1)
     minitest (5.11.3)
     msgpack (1.4.2)
     nenv (0.3.0)
@@ -186,8 +188,7 @@ GEM
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -237,7 +238,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (~> 1.0)
-    rake (12.3.3)
+    rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -325,7 +326,7 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   active_storage_validations (= 0.8.9)
@@ -335,10 +336,11 @@ DEPENDENCIES
   bootstrap-sass (= 3.4.1)
   bootstrap-will_paginate (= 1.0.0)
   byebug (= 11.1.3)
-  capistrano (= 3.11.2)
-  capistrano-passenger (= 0.2.0)
-  capistrano-rails (= 1.4.0)
-  capistrano-rbenv (= 2.1.4)
+  capistrano
+  capistrano-passenger
+  capistrano-rails
+  capistrano-rbenv
+  capistrano-rbenv-install
   capybara (= 3.35.3)
   factory_bot (= 6.1.0)
   factory_bot_rails (= 6.1.0)
