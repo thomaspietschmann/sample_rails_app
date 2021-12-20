@@ -18,10 +18,11 @@ gem 'jbuilder',                   '2.9.1'
 gem 'bootsnap',                   '1.4.5', require: false
 gem 'factory_bot',                '5.1.1'
 gem 'factory_bot_rails',          '5.1.1'
-gem 'capistrano',                 '3.11.2'
-gem 'capistrano-rails',           '1.4.0'
-gem 'capistrano-rbenv',           '2.1.4 '
-gem 'capistrano-passenger',       '0.2.0'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv'
+gem 'capistrano-rbenv-install'
+gem 'capistrano-passenger'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 group :development, :test, :staging do
