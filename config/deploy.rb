@@ -1,4 +1,6 @@
+
 set :rbenv_ruby, '2.6.3'
+
 set :rbenv_path, "~/.rbenv"
 set :user, "rails"
 # set :rbenv_type, :user
