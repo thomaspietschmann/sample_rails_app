@@ -1,9 +1,14 @@
 # set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
 # set :rbenv_ruby, '2.7.5'
 
-# set :rbenv_path, "~/.rbenv"
-# set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-# set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+
+set :rbenv_ruby, '2.7.5'
+set :rbenv_path, "~/.rbenv"
+set :rbenv_type, :user
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+
+set :passenger_restart_with_touch, false
 
 set :application, "sample_rails_app"
 set :repo_url, "https://github.com/thomaspietschmann/sample_rails_app.git"
