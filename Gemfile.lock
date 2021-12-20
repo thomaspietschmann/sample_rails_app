@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/mimemagicrb/mimemagic.git
+  revision: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
+  ref: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
+  specs:
+    mimemagic (0.3.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -60,6 +67,8 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    airbrussh (1.4.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     ansi (1.5.0)
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
@@ -81,6 +90,8 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.13)
     bindex (0.8.1)
+    bootsnap (1.4.5)
+      msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -88,6 +99,24 @@ GEM
       will_paginate
     builder (3.2.4)
     byebug (11.0.1)
+    capistrano (3.16.0)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (2.0.1)
+      capistrano (~> 3.1)
+    capistrano-passenger (0.2.1)
+      capistrano (~> 3.0)
+    capistrano-rails (1.6.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (>= 1.1, < 3)
+    capistrano-rbenv (2.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+    capistrano-rbenv-install (1.2.0)
+      capistrano (>= 3.0)
+      capistrano-rbenv (>= 2.0)
     capybara (3.28.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -105,6 +134,11 @@ GEM
     docile (1.4.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    factory_bot (5.1.1)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     faker (2.1.2)
       i18n (>= 0.8)
     ffi (1.15.4)
@@ -129,6 +163,8 @@ GEM
     image_processing (1.9.3)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.13, < 3)
+    jbuilder (2.9.1)
+      activesupport (>= 4.2.0)
     jmespath (1.4.0)
     json (2.6.1)
     listen (3.1.5)
@@ -144,9 +180,6 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.10)
-      nokogiri (~> 1)
-      rake
     mini_magick (4.9.5)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
@@ -156,7 +189,11 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    msgpack (1.4.2)
     nenv (0.3.0)
+    net-scp (3.0.0)
+      net-ssh (>= 2.6.5, < 7.0.0)
+    net-ssh (6.1.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -267,6 +304,9 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.1)
+    sshkit (1.21.2)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -303,15 +343,25 @@ DEPENDENCIES
   active_storage_validations (= 0.8.2)
   aws-sdk-s3 (= 1.46.0)
   bcrypt (= 3.1.13)
+  bootsnap (= 1.4.5)
   bootstrap-sass (= 3.4.1)
   bootstrap-will_paginate (= 1.0.0)
   byebug (= 11.0.1)
+  capistrano
+  capistrano-passenger
+  capistrano-rails
+  capistrano-rbenv
+  capistrano-rbenv-install
   capybara (= 3.28.0)
+  factory_bot (= 5.1.1)
+  factory_bot_rails (= 5.1.1)
   faker (= 2.1.2)
   guard (= 2.15.0)
   guard-minitest (= 2.4.6)
   image_processing (= 1.9.3)
+  jbuilder (= 2.9.1)
   listen (= 3.1.5)
+  mimemagic!
   mini_magick (= 4.9.5)
   minitest (= 5.11.3)
   minitest-reporters (= 1.3.8)
