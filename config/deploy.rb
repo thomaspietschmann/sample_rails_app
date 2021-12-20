@@ -2,7 +2,7 @@
 # set :rbenv_ruby, '2.7.5'
 
 
-set :rbenv_ruby, '2.7.5'
+set :rbenv_ruby, '2.6.3'
 set :rbenv_path, "~/.rbenv"
 set :rbenv_type, :user
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
